@@ -1,0 +1,2 @@
+java -jar target/exploresoweto-0.0.1-SNAPSHOT.jar
+java -jar -Dserver.port=8082 target/exploresoweto-0.0.1-SNAPSHOT.jar
