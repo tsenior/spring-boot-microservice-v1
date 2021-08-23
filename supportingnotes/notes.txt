@@ -1,2 +1,23 @@
 java -jar target/exploresoweto-0.0.1-SNAPSHOT.jar
 java -jar -Dserver.port=8082 target/exploresoweto-0.0.1-SNAPSHOT.jar
+
+
+The JPARepository interface provide the below out of the box when extended, e.g interface Tour extends JpaRepository<Tour, Integer>
+-> create and updates methods
+    - <S extends Tour> TourRepository.save(S entity)
+    - <S extends Tour> Iterable<S> TourRepository.save(Iterable<S> entities)
+
+-> Read methods
+    - long TourRepository.count();
+    - Boolean TourRepository.exists(Tour id)
+    - Iterable<Tour> TourRepository.findAll();
+    - Iterable<Tour> TourRepository.findAll(Iterable<ID> ids)
+    - Tour TourRepository.findById(ID id)
+
+-> Delete methods
+    - void TourRepository.delete(Integer)
+    - void TourRepository.delete(Iterable<? extends Tour> entities)
+    - void TourRepository.delete(Tour entity)
+    - void TourRepository.deleteAll()
+
+- long .count()
